@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  
+  <head>
+    <title>Piatra hartie foarfeca</title>
+  </head>
+  <body>
+    <div class="nume"> 
+      <h1>PIATRA   |   HARTIE   |   FOARFECA</h1>
+    </div>
+    <div class="butoane">
+      <button class="btn" onclick="
+          const semnIesit = Math.random();
+          let computerMove = '';
+          if(semnIesit >= 0 && semnIesit < 1 / 3 ) {
+             computerMove = 'Piatra';
+          } else if (semnIesit >= 1 / 3 && semnIesit < 2 / 3 ) {
+             computerMove = 'Hartie';
+          } else if (semnIesit >= 2 / 3 && semnIesit < 1) {
+             computerMove = 'Foarfeca';}
+            let result = '';
+
+          if(computerMove === 'Piatra'){
+            result = 'Remiza.';
+          } else if(computerMove === 'Hartie'){
+            result = 'Ai pierdut.';
+          } else if(computerMove === 'Foarfeca'){
+            result = 'Ai castigat.';
+          };
+
+          document.getElementById('raspuns').innerHTML = `Ai ales piatra. Calculatorul a ales ${computerMove}. ${result}`;
+        ">👊</button>
+      <button class="btn" onclick="
+      const semnIesit = Math.random();
+
+      let computerMove = '';
+
+      if(semnIesit >= 0 && semnIesit < 1 / 3 ) {
+         computerMove = 'Piatra';
+      } else if (semnIesit >= 1 / 3 && semnIesit < 2 / 3 ) {
+         computerMove = 'Hartie';
+      } else if (semnIesit >= 2 / 3 && semnIesit < 1) {
+         computerMove = 'Foarfeca';}
+
+        let result = '';
+
+      if(computerMove === 'Hartie'){
+        result = 'Remiza.';
+      } else if(computerMove === 'Foarfeca'){
+        result = 'Ai pierdut.';
+      } else if(computerMove === 'Piatra'){
+        result = 'Ai castigat.';
+      };
+
+      document.getElementById('raspuns').innerHTML = `Ai ales hartie. Calculatorul a ales ${computerMove}. ${result}`;
+    ">✋</button>
+      <button class="btn" onclick="
+      const semnIesit = Math.random();
+
+      let computerMove = '';
+
+      if(semnIesit >= 0 && semnIesit < 1 / 3 ) {
+         computerMove = 'Piatra';
+      } else if (semnIesit >= 1 / 3 && semnIesit < 2 / 3 ) {
+         computerMove = 'Hartie';
+      } else if (semnIesit >= 2 / 3 && semnIesit < 1) {
+         computerMove = 'Foarfeca';}
+
+        let result = '';
+
+      if(computerMove === 'Foarfeca'){
+        result = 'Remiza.';
+      } else if(computerMove === 'Piatra'){
+        result = 'Ai pierdut.';
+      } else if(computerMove === 'Hartie'){
+        result = 'Ai castigat.';
+      };
+
+      document.getElementById('raspuns').innerHTML = `Ai ales foarfeca. Calculatorul a ales ${computerMove}. ${result}`;
+      
+    ">✌️</button>
+    </div>
+      <div class="rezultat">
+      <button class="reset-btn" onclick="
+      doSomething();
+      ">Reset</button>
+
+      <p id="raspuns"></p>
+
+    </div>  
+
+
+  <script>
+  
+    function doSomething(){
+      document.getElementById("raspuns").innerHTML = '';
+    }
+
+  </script>
+  
+  </body>
+
+</html>
